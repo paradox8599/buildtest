@@ -17,7 +17,6 @@ services:
       args:
         DB_PROVIDER: "postgresql"
     environment:
-      DB_PROVIDER: "postgresql"
       DATABASE_URL: "postgresql://ks:ks@db:5432/ks"
     ports:
       - 3000:3000

@@ -17,4 +17,4 @@ COPY . .
 RUN npm run postinstall
 RUN npm run build
 
-CMD npm run push && npm run start
+CMD DB_PROVIDER=${DB_PROVIDER} npm run push && npm run start
