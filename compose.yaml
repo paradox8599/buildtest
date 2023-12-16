@@ -18,5 +18,7 @@ services:
         DB_PROVIDER: "postgresql"
     environment:
       DATABASE_URL: "postgresql://ks:ks@db:5432/ks"
+    volumes:
+      - ./logs:/root/.npm/_logs
     ports:
       - 3000:3000
