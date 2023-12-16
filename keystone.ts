@@ -14,8 +14,6 @@ import { lists } from "./schema";
 // when you write your list-level access control functions, as they typically rely on session data
 import { withAuth, session } from "./auth";
 
-console.log("+++DB_PROVIDER:", process.env.DB_PROVIDER);
-
 export default withAuth(
   config({
     db: {
