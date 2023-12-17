@@ -1,23 +1,11 @@
 services:
-  db:
-    image: postgres
-    # ports:
-    #   - 5432:5432
-    environment:
-      POSTGRES_DB: ks
-      POSTGRES_USER: ks
-      POSTGRES_PASSWORD: ks
-      PGDATA: /var/lib/postgresql/data/pgdata
-    volumes:
-      - ./.keystone/postgres:/var/lib/postgresql/data
-
   admin:
     build:
       dockerfile: Dockerfile
       args:
-        DB_PROVIDER: "postgresql"
+        DB_PROVIDER: "sqlite"
     environment:
-      DATABASE_URL: "postgresql://ks:ks@db:5432/ks"
+      DATABASE_URL: "file://keystone.db"
     volumes:
       - ./logs:/root/.npm/_logs
     ports:
