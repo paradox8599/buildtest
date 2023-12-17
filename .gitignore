@@ -4,3 +4,4 @@ node_modules
 schema.*
 keystone.db
 *.log
+!schema.ts
